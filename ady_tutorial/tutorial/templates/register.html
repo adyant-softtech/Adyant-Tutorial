@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <h1> Student Registartions</h1>
+        <script>
+            function submitForm(event){
+                console.log(document.getElementById('name').value);
+                console.log(document.getElementById('class').value);
+            }
+        </script>
+    </head>
+
+    <body>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <!-- <table style="border: solid; align-items: center;">
+                <tr>
+                <td>
+                    <label>Id : </label>
+                    <input type="text" name="id">
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Name : </label>
+                        <input type="text" name="name" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Class : </label>
+                        <input type="text" name="class" id="class">
+                    </td>
+                    </tr>
+                <tr>
+                    <td>
+                        <label>Branch : </label>
+                        <input type="text" name="branch">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Collage : </label>
+                        <input type="text" name="collage">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Course : </label>
+                        <input type="text" name="course">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Address : </label>
+                        <input type="textarea" name="address">
+                    </td>
+                </tr>
+            </table> -->
+            <div>
+                {{form.as_p}}
+            </div>
+
+            <input type="submit" name="submit"/>
+        </form>
+        <p>
+            {% for item in data %}
+            <ul>
+
+                <li>
+                    {{item.student_id}}
+                </li>
+                <li>
+                    {{item.stu_name}}
+                </li>
+                <li>
+                    {{item.stu_class}}
+                </li>
+            </ul>
+            {% endfor %}
+
+        </p>
+    </body>
+</html>

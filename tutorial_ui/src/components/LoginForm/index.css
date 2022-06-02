@@ -1,0 +1,12 @@
+.login {
+    background-color: rgb(96, 96, 202);
+    /* min-height: 100vh; */
+    /* margin-top: 200px;
+    margin-left: 180px;
+    margin-right: 180px; */
+    margin-top: 10px;
+    padding-top: 10px;
+    height: 50%;
+    width: auto;
+    padding-left: 5em;
+}

@@ -1,0 +1,12 @@
+.container {
+    background: grey;
+}
+
+.container td {
+    padding: 10px;
+}
+
+.logo {
+    width: 5%;
+    height: 5%;
+}

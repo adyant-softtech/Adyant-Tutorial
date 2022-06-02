@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'tutorial/css/main.css' %}">
+    </head>
+    <body>
+        <div>
+            <img class='logo' src="{% static 'tutorial/images/logo2.png' %}" />
+        </div>
+
+        <table style="border: solid;" class="container">
+            {% for item in data %}
+            <tr>
+                <td>
+                    {{item.student_id}}
+                </td>
+                <td>
+                    {{item.stu_name}}
+                </td>
+                <td>
+                    {{item.stu_class}}
+                </td>
+                <td>
+                    {{item.address}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_table}}
+                <input type="submit" name="update" value="UPDATE"/>
+                <input type="submit" name="delete" value="DELTE"/>
+            </form>
+        </div>
+    </body>
+</html>
